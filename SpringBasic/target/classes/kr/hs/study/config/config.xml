@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	                    http://www.springframework.org/schema/beans/spring-beans.xsd
+	                    http://www.springframework.org/schema/context
+	                    http://www.springframework.org/schema/context/spring-context.xsd
+	                    http://www.springframework.org/schema/aop
+	                    http://www.springframework.org/schema/aop/spring-aop.xsd">
+	<!-- 스프링 컨테이너야.. 객체를 생성해서 저장해줘 근데 무슨객체를??? -->
+	<!-- kr.hs.study.beans.TestBean 이라를 클래스의 객체를 만들어서 컨테이너에 보관해라 -->
+<!-- 	<bean id="t1" class="kr.hs.study.beans.TestBean" /> -->
+
+	<bean id="t2" class="kr.hs.study.beans.TestBean2" lazy-init="true" />
+
+</beans>	                        

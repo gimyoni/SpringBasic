@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation=
+       "http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+       xmlns:context="http://www.springframework.org/schema/context">
+ 
+ 	<bean id="car1" class="kr.hs.study.beans.HyunDai" autowire="constructor">
+ 		<constructor-arg value="아반떼" index="1"></constructor-arg>
+ 		<constructor-arg value="핑크" index="2"></constructor-arg>
+ 	</bean>
+ 	
+ 	<bean id="c1" class="kr.hs.study.beans.Car">
+ 		<constructor-arg value="5000000"></constructor-arg>
+ 	</bean>
+ 	
+ 	<bean id="car2" class="kr.hs.study.beans.HyunDai">
+ 		<constructor-arg ref="c2"></constructor-arg>
+ 		<constructor-arg value="아반떼2" index="1"></constructor-arg>
+ 		<constructor-arg value="검정" index="2"></constructor-arg>
+ 	</bean>
+ 	
+ 	<bean id="c2" class="kr.hs.study.beans.Car">
+ 		<constructor-arg value="8000000"></constructor-arg>
+ 	</bean>
+ 
+</beans>
