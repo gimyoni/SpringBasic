@@ -1,0 +1,19 @@
+package kr.hs.study.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import kr.hs.study.DTO.LoginDTO;
+
+@Controller
+public class TestController {
+	
+	@PostMapping("/login")
+	public String login(LoginDTO dto) {
+		return "login";
+	}
+	
+	
+
+}

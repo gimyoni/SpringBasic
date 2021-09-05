@@ -1,0 +1,30 @@
+package kr.hs.study.controller;
+
+import org.apache.ibatis.type.Alias;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import kr.hs.study.DTO.BookDTO;
+
+@Controller
+public class TestController {
+	
+	@Autowired
+	SqlSessionTemplate sqlsessiontemplate;
+	@GetMapping("/book")
+	public String book(BookDTO dto) {
+		return "book";
+	}
+	
+	@PostMapping("/result")
+	public String result(BookDTO dto) {
+		return "result";
+	}
+	
+	
+
+}

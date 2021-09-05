@@ -1,0 +1,24 @@
+package kr.hs.study.controller;
+
+
+
+import kr.hs.study.DTO.ModelDTO;
+
+@Controller
+public class TestController {
+	
+	@Autowired
+	SqlSessionTemplate sqlsessiontemplate;
+	// IOC container¿¡¼­ SqlSessionTemplat
+	
+	@GetMapping("/login_form")
+	public String login_form() {
+		return "login_form";
+	}
+	
+	@PostMapping("/result")
+	public String result(@ModelAttribute("login") ModelDTO dto) {
+		sqlsessiontemplate.insert("login.insert", dto);
+		return "result";
+	}
+}

@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\Mirim\OneDrive\πŸ≈¡ »≠∏È\Spring_myBatis\.metadata\.plugins\org.eclipse.jdt.core
+101789680.index
+811314499.index
+3778599675.index
+948723180.index

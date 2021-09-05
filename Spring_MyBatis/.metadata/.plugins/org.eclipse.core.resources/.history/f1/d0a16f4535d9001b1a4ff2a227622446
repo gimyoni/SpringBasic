@@ -1,0 +1,30 @@
+package kr.hs.study.controller;
+
+import org.apache.ibatis.type.Alias;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import kr.hs.study.DTO.LoginDTO;
+
+@Controller
+public class TestController {
+	
+	@Autowired
+	SqlSessionTemplate sqlsessiontemplate;
+	// IOC container¿¡¼­ SqlSessionTemplat
+	
+	@GetMapping("/login_form")
+	public String login_form(LoginDTO dto) {
+		return "login_form";
+	}
+	
+	@PostMapping("/result")
+	public String result(LoginDTO dto) {
+		sqlsessiontemplate.insert("login.insert", dto);
+		return "result";
+	}
+}

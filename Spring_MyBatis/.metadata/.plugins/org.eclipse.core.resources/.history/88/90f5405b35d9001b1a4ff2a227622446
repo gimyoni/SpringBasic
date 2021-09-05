@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <!-- 실제 sql문은 mapper에서 있게함 -->
+ <mapper namespace="login">
+ 		<insert id="insert" parameterType="kr.hs.study.model.dto.ModelDTO">
+		insert into login1(id, pw) values(#{id}, #{pw})
+	</insert>
+
+</mapper>       
